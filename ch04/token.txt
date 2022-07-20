@@ -1,0 +1,14 @@
+evansjr@Devcorps(454)$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
+Name:         eks-admin-token-cmt9h
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: eks-admin
+              kubernetes.io/service-account.uid: 100150f8-9715-4b67-bc3b-8b20f77310ed
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1066 bytes
+namespace:  11 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6InZfUlFlc2ktcUtZSDBPVFVrMGhDRVB3blpPZEhPaXFld2RweHJnakI3QlEifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJla3MtYWRtaW4tdG9rZW4tY210OWgiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZWtzLWFkbWluIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMTAwMTUwZjgtOTcxNS00YjY3LWJjM2ItOGIyMGY3NzMxMGVkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50Omt1YmUtc3lzdGVtOmVrcy1hZG1pbiJ9.ah-JISNSgoLo4xAXuHMbif66SbZh__OgsYYJjWqVH-TfH9F5I-dFnhY1S_qxzuVMFo6Do223PnaU7NZOk5pl6WqaLsDvaSr3Yxi5w37VGqKqK5_8ywVeJdzYh3ayJ1aA3nJpXdcGR6le4vkt8jYFyn1vkNsSPd5HQ2sS3Py7lnOhRHtVA0w-j1TfpoIu1B28WsUOajzOMVsnY62Q0nWba3qL1zW3fWdcoCU2I6vUjFY69uEIawsO-Ppse4pOpaBiRqjHLns11bI9ZwxvlQjWfMJoy5i7T51tukd6yWqQp3pPJnPWoqnyAdn2Df-AZCm46n_se6nhJ74s9yU5FgAn1g
