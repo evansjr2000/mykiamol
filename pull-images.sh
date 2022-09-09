@@ -8,3 +8,6 @@ popd
 pushd ch05/
 ./ch05-pull.sh
 popd
+pushd ch15/
+./pull-images.sh
+popd
