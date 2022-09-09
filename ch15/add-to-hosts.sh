@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 CONTROLLER="$2-controller"
 NS="kiamol-$2"
