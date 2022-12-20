@@ -54,5 +54,8 @@ dkms.conf
 
 # emacs crap
 *.*~
+
+# Other
 images*.txt
 *.tar
+*.tgz
