@@ -14,7 +14,7 @@ spec:
   selector:
     app: todo-web
 ---
-apiVersion: networking.k8s.io/v1beta1 
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: todo2-new
@@ -33,7 +33,7 @@ spec:
           serviceName: todo-web-sticky
           servicePort: 80
 ---
-apiVersion: networking.k8s.io/v1beta1 
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: todo2-static
@@ -52,7 +52,7 @@ spec:
           serviceName: todo-web
           servicePort: 80
 ---
-apiVersion: networking.k8s.io/v1beta1 
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: todo2
