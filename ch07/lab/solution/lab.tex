@@ -1,0 +1,58 @@
+%% Include table macros
+%
+
+\def\title#1{{\noindent \bf #1}}
+\font\eightrm=cmr8
+\let\sc=\eightrm % small caps (NOT a caps-and-small-caps font)
+\def\ll#1{\leftline{\bf#1}}
+\def\ttitle#1{\centerline{\bf #1}\bigskip\nobreak}
+\def\bs{\bigskip}
+\def\ms{\medskip}
+\def\ss{\smallskip}
+\def\mb{$\bullet$\ }
+
+\input myindexing
+\input twelvepoint
+% \input moredefs
+
+\twelvepoint
+
+
+\title{7.6 Lab}
+
+\bs
+
+It’s back to the Pi app for this lab. The Docker image kiamol/ch05-pi can actually be used in different ways, and to run it as a web app, you need to override the startup command in the container spec. We’ve done that in the YAML files in previous chapters, but now we’ve been asked to use a standard approach to setting up the pod. Here are the requirements and some hints:
+
+\ms
+
+\mb     The app container needs to use a standard startup command that all Pods in our platform are using. It should run {\tt /init/startup}.
+
+\mb   The Pod should use port 80 for the app container.
+
+\mb     The Pod should also publish port 8080 for an HTTP server, which returns the version number of the app,
+
+\mb The app container image doesn’t contain a startup script, so you’ll need to use something that can create that script and make it executable for the app container to run.
+
+\mb  The app doesn’t publish a version API on port 8080 (or anywhere else), so you’ll need something that can provide that (it can just be any static text).”
+
+\ms
+
+\noindent The starting point is the YAML in ch07/lab/pi, which is broken
+at the moment. You’ll need to do some investigation into how the
+app ran in previous chapters and apply the techniques we’ve learned
+in this chapter. You have plenty of ways to approach this one, and
+you’ll find my sample solution in the usual place:
+
+$$
+https://github.com/sixeyed/kiamol/blob/master/ch07/lab/README.md.
+$$
+
+
+\bye
+
+Excerpt From
+Learn Kubernetes in a Month of Lunches
+Elton Stoneman
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
