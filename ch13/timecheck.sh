@@ -1,17 +1,30 @@
 #!/bin/bash
 
+
+
+
+myhost=`hostname`
+
+if [ "$myhost" = "debian-gnu-linux-10" ]; then
+    export MYCMD="minikube kubectl --"
+else
+    export MYCMD="kubectl"
+fi
+
+docker login docker.io/evansjr
+
 # cd /etc/mykiamol/ch13
 
-kubectl apply -f timecheck/
+$MYCMD apply -f timecheck/
 
-kubectl wait --for=condition=ContainersReady pod -l app=timecheck -n kiamol-ch13-dev
+$MYCMD wait --for=condition=ContainersReady pod -l app=timecheck -n kiamol-ch13-dev
 
-kubectl logs -l app=timecheck --all-containers -n kiamol-ch13-dev --tail 1
+$MYCMD logs -l app=timecheck --all-containers -n kiamol-ch13-dev --tail 1
 
-kubectl wait --for=condition=ContainersReady pod -l app=timecheck -n kiamol-ch13-test
+$MYCMD wait --for=condition=ContainersReady pod -l app=timecheck -n kiamol-ch13-test
 
 # check those logs:
-kubectl logs -l app=timecheck --all-containers -n kiamol-ch13-test --tail 1
+$MYCMD logs -l app=timecheck --all-containers -n kiamol-ch13-test --tail 1
 
 exit 0
 

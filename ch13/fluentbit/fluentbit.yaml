@@ -18,6 +18,7 @@ spec:
       containers:
       - name: fluent-bit
         image: fluent/fluent-bit:1.4.6
+#        image: fluentd:latest
         volumeMounts:
         - name: fluent-bit-config
           mountPath: /fluent-bit/etc/
