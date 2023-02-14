@@ -27,7 +27,7 @@ spec:
               mountPath: /logs
         - name: logger
           image: evansjr/custom-fluentd:latest
-          command: ['sh', '-c', 'tail -f /logs-ro/timecheck.log'] 
+#          command: ['sh', '-c', 'tail -f /logs-ro/timecheck.log'] 
           volumeMounts:
             - name: logs-dir
               mountPath: /logs-ro
