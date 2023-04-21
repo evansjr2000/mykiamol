@@ -4,7 +4,10 @@ export INC=5
 
 # deploy the LoadBalancer Service for the website--if your firewall checks
 # that you want to allow traffic, then it is OK to say yes:
-kubectl apply -f numbers/web-service.yaml
+
+# Made change from book for debugging purposes.
+
+kubectl apply -f numbers/web-service2.yaml
 
 sleep $INC
 
