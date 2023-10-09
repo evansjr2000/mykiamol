@@ -6,3 +6,5 @@ httpMethod: HEAD
 pingIntervalMilliseconds: 30000
 # chapter where this exercise is used
 kiamolChapter: ch10
+# Self test.  JRE.
+dummyDummy: myDummy

@@ -4,7 +4,8 @@ metadata:
   name: {{ .Release.Name }}
   labels:
     kiamol: {{ .Values.kiamolChapter }}
-spec:
+    dummy: {{ .Values.dummyDummy }}
+    spec:
   selector:
     matchLabels:
       app: web-ping
